@@ -43,9 +43,9 @@
     render() {
       const thisBooksList = this;
 
-      for (const book of this.data) {
+      for (const book of dataSource.books) {
         const ratingBgc = thisBooksList.determineRatingBgc(book.rating);
-        const ratingWidth = ratingBgc * 10;
+        const ratingWidth = book.rating * 10;
         book.ratingBgc = ratingBgc;
         book.ratingWidth = ratingWidth;
         const generatedHTML = templates.books(book);
